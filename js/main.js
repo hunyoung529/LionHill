@@ -1,12 +1,4 @@
 $(document).ready(function () {
-  $.get("./common/mainCommon.html", function (data) {
-    var headerContent = $(data).filter("header").html();
-    var footerContent = $(data).filter("footer").html();
-
-    $("header").html(headerContent);
-    $("footer").html(footerContent);
-  });
-
   $(function () {
     $(".btt").click(function () {
       $(".modal-window").toggleClass("on"); //id가 "followModal"인 모달창을 열어준다.
