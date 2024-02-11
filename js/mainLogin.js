@@ -66,27 +66,6 @@ $(document).ready(function () {
     });
   }
 
-  //헤더에 있는 로그인 버튼 누르면 팝업 띄우기==================================
-  const toggleLogin = document.querySelector(".login_backg");
-  document.getElementById("headerLogin").addEventListener("click", function () {
-    if (!alreadyLogin && kakaoKeys.length === 0) {
-      //로그아웃 버튼일때는 팝업 띄우지 않기
-      toggleLogin.classList.add("active");
-    }
-  });
-  //모바일 헤더에 있는 로그인 버튼 누르면 팝업 띄우기==================================
-  document
-    .getElementById("headerLoginM")
-    .addEventListener("click", function () {
-      if (!alreadyLogin && kakaoKeys.length === 0) {
-        //로그아웃 버튼일때는 팝업 띄우지 않게
-        toggleLogin.classList.add("active");
-      }
-    });
-  //창 닫기 누르면 팝업 꺼지기==================================
-  document.getElementById("closeBtn").addEventListener("click", function () {
-    toggleLogin.classList.remove("active");
-  });
   //비밀번호 토글=================================================
   const eyeToggle = document.querySelector(".eyeBtn");
   const pwInput = document.querySelector('input[type="password"]');
