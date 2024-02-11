@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./reset.css" />
+
+
+  <!-- 스크립트 -->
+  <script defer src="../js/mainCommon.js"></script>
+</head>
+
+
+<body>
+
+  <header id="header">
+
+
+    <div class="inner">
+      <div class="inner2">
+
+        <h1 class="logo">
+          <a href="./index.html">
+            <img src="./common/img/wh_logo.PNG" alt="" />
+          </a>
+        </h1>
+
+        <ul class="gnb">
+          <li>
+            <a href="./Lionhill/sub/room.html">Rooms</a>
+          </li>
+          <li>
+            <a href="./Lionhill/sub/events.html">Events</a>
+          </li>
+          <li>
+            <a href="./Lionhill/sub/fac.html">Facilities</a>
+          </li>
+          <li>
+            <a href="./Lionhill/sub/about.html">About</a>
+          </li>
+        </ul>
+
+        <div class="btn_wrap">
+          <button class="reser"><a href="./sub/reservation.html">실시간 예약</a></button>
+          <button class="login" id="headerLogin"><span id="logInOut">로그인</span></button>
+          <div class="menu_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="menu_show">
+      <a class="txt-ani" href="./sub/room.html">Rooms</a>
+      <a class="txt-ani" href="./sub/events.html">Events</a>
+      <a class="txt-ani" href="./sub/fac.html">Facilities</a>
+      <a class="txt-ani" href="./sub/about.html">about</a>
+      <a class="txt-ani" href="./sub/reservation.html">실시간 예약</a>
+      <a class="txt-ani" id="headerLoginM"><span id="logInOutM">로그인</span></a>
+    </div>
+
+    <aside class="modal-overlay">
+      <div class="modal-window">
+        <div class="wrap">
+          <div class="cont_reser">
+            <div class="bot_top">
+              <div class="left">
+                <span class="icon"><img src="./main/img/chat.webp" alt="" /></span>
+                <div class="txt">
+                  <h2>예약 고객센터</h2>
+                  <span>운영시간 보기</span>
+                </div>
+              </div>
+              <div class="right">
+                <a href="#" class="set"><img src="./main/img/settings.png" alt="" /></a>
+                <a href="#" class="close"><img src="./main/img/close.png" alt="" /></a>
+              </div>
+            </div>
+            <div class="bot_br"></div>
+
+            <div class="bot_chat_wrap">
+              <div class="bot_mid">
+                <div class="msg">
+                  <div class="icon">
+                    <img src="./main/img/chat.webp" alt="" />
+                  </div>
+                  <div class="txt">
+                    <span>숙소 예약실</span>
+                    <p>
+                      안녕하세요. 고객님😄<br />
+                      예약 고객센터 입니다<br />
+                      궁금하신 사항을 선택해주세요💚
+                    </p>
+                  </div>
+                </div>
+                <div class="btn_new">
+                  <button class="new_m">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                        foundation="[object Object]" class="sc-beqWaB jWmMk" data-testid="bezier-react-icon"
+                        margintop="0" marginright="4" marginbottom="0" marginleft="0">
+                        <path fill="currentColor" fill-rule="evenodd"
+                          d="m21.324 11.116-15.588-9a1 1 0 0 0-1.471 1.106l1.92 7.774 11.145.636v.702l-11.148.662-1.976 7.775a.998.998 0 0 0 .97 1.246c.171 0 .344-.044.5-.133l15.648-9.036a1 1 0 0 0 0-1.732Z"
+                          clip-rule="evenodd"></path>
+                      </svg></span>새 문의하기
+                  </button>
+                </div>
+                <div class="kwd">보통 수십 분 내 답변</div>
+              </div>
+              <div class="bot_btm">
+                <div class="tt">
+                  <form action="">
+                    <input type="text" placeholder="다른방법으로 상담하기" />
+                  </form>
+                </div>
+                <div class="kak">
+                  <a href="https://open.kakao.com/o/sfI0J6Cf"><img src="./main/img/kakao.png" alt="" /></a>
+                </div>
+              </div>
+              <div class="bot_ing">
+                <a href="#">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                      foundation="[object Object]" class="sc-beqWaB jWmMk" data-testid="bezier-react-icon" margintop="0"
+                      marginright="4" marginbottom="0" marginleft="0" aria-hidden="true">
+                      <path fill="currentColor" fill-rule="evenodd"
+                        d="M12 1C5.959 1 1.054 5.872 1 11.9v.2C1.054 18.128 5.959 23 12 23c6.075 0 11-4.925 11-11S18.075 1 12 1Zm5.804 15.212a1.642 1.642 0 0 1 .094-1.26 6.56 6.56 0 0 0 .65-3.785c-.368-2.961-2.756-5.355-5.718-5.716a6.604 6.604 0 0 0-7.38 7.378c.362 2.962 2.755 5.35 5.716 5.719a6.565 6.565 0 0 0 3.786-.65 1.641 1.641 0 0 1 1.26-.094l1.344.448a.55.55 0 0 0 .696-.695l-.448-1.345Zm-8.832-4.267c0 1.131.267 1.594.907 1.594s.908-.463.908-1.594c0-1.132-.267-1.595-.908-1.595-.64 0-.907.463-.907 1.595Zm4.242 0c0 1.132.267 1.595.908 1.595.64 0 .907-.463.907-1.595s-.267-1.595-.907-1.595c-.641 0-.908.463-.908 1.595Z"
+                        clip-rule="evenodd"></path>
+                    </svg></span>
+                  채널톡 이용중</a>
+              </div>
+              <div class="bot_btn">
+                <div class="ico_wrap">
+                  <ul>
+                    <li>
+                      <a href="">
+                        <figure>
+                          <img src="./common/img/home.svg" alt="" />
+                          <figcaption>홈</figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <figure>
+                          <img src="./common/img/sms.svg" alt="" />
+                          <figcaption>대화</figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <figure>
+                          <img src="./common/img/set.svg" alt="" />
+                          <figcaption>설정</figcaption>
+                        </figure>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cont_center">
+            <div class="front">
+              <div class="inn">
+                <button class="prev">
+                  <svg width="20" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    foundation="[object Object]" class="InnerIconstyled__Icon-ch-front__sc-197h5bb-0 bZcKFT"
+                    defaultopacity="1" hoveredopacity="1" margintop="0" marginright="0" marginbottom="0" marginleft="8"
+                    withtheme="true">
+                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M9.17255 16.4226C8.84711 16.748 8.31947 16.748 7.99404 16.4226L2.1607 10.5893C1.83527 10.2638 1.83527 9.73619 2.1607 9.41075L7.99404 3.57742C8.31947 3.25198 8.84711 3.25198 9.17255 3.57742C9.49799 3.90285 9.49799 4.43049 9.17255 4.75593L3.92847 10L9.17255 15.2441C9.49799 15.5695 9.49799 16.0972 9.17255 16.4226Z">
+                    </path>
+                  </svg>
+                </button>
+                <figure>
+                  <img src="./main/img/chat.webp" alt="" />
+                  <img src="./main/img/chat.webp" alt="" class="move" />
+                </figure>
+                <div class="txt">
+                  <span>예약 고객센터</span>
+                  <p>몇 분 내 답변 받으실 수 있어요</p>
+                </div>
+              </div>
+            </div>
+            <div class="center_top">
+              <figure>
+                <img src="./main/img/chat.webp" alt="" />
+              </figure>
+              <div class="txt">
+                <strong>예약 고객센터에 문의하기</strong>
+                <p>운영시간 보기</p>
+              </div>
+            </div>
+            <div class="center_mid">
+              <div class="time">오전 11:42</div>
+              <div class="chatt">
+                <div class="msg_hd">숙소 예약실</div>
+                <div class="msg_ct first">
+                  <figure>
+                    <img src="./main/img/chat.webp" alt="" />
+                  </figure>
+                  <div class="buble">
+                    <span>안녕하세요. 고객님😁<br />
+                      예약 고객센터 입니다<br />
+                      궁금하신 사항을 선택해주세요💚
+                    </span>
+                  </div>
+                  <div class="time" style="display: none">
+                    오전 12:20
+                  </div>
+                </div>
+                <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="msg_ct two">
+                  <a href="./sub/reservation.html">
+                    <button class="bubble">아직 예약 전이에요👋</button>
+                  </a>
+                  <a href="./sub/checkCustomer.html">
+                    <button class="bubble">예약을 완료했어요👍</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bot_wrap">
+        <button class="btt">
+          <img src="./main/img/bot_icon.png" alt="" />
+        </button>
+      </div>
+    </aside>
+  </header>
+
+
+  <footer>
+    <div class="inner">
+      <div class="foot_top">
+        <h2 class="logo">
+          <a href="./index.html">
+            <img src="./common/img/wh_logo.PNG" alt="" />
+          </a>
+        </h2>
+        <div class="foot_con">
+          <a href="https://open.kakao.com/o/sfI0J6Cf" class="insta"><img src="./common/img/insta.png" alt="" /></a>
+          <a href="https://open.kakao.com/o/sfI0J6Cf" class="kakao"><img src="./common/img/chanal.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="foot_btm">
+
+        <div class="info">
+          <span class="info_tel"> TEL 010-1111-1111 </span>
+          <div class="info_contents">
+            <a href="./sub/about.html" class="">펜션소개</a>
+            <a href="./sub/about.html" class="">오시는길</a>
+            <a href="./sub/about.html" class="">개인정보처리방침</a>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="copy">
+          <div class="right">
+            © 2016. 라이온힐휴양펜션 Co. All rights reserved.
+          </div>
+          <address>
+
+            <span>제주특별자치도 서귀포시 안덕면 덕수리 236 (평화로 507)</span>
+            <span>대표이사 : 이종석</span>
+            <span> 사업자 등록번호 618-81-07176</span>
+            <span>TEL 010-1111-1111</span>
+
+          </address>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
