@@ -1,20 +1,20 @@
 $(document).ready(function () {
-  $.get("./common/mainCommon.html", function (data) {
-    var headerContent = $(data).filter("header").html();
-    var footerContent = $(data).filter("footer").html();
+  // $.get("./common/mainCommon.html", function (data) {
+  //   var headerContent = $(data).filter("header").html();
+  //   var footerContent = $(data).filter("footer").html();
 
-    headerContent = headerContent.replace(
-      '"../common/img/wh_logo.PNG',
-      '"./common/img/wh_logo.PNG'
-    );
-    footerContent = footerContent.replace(
-      '"../common/img/wh_logo.PNG',
-      '"./common/img/wh_logo.PNG'
-    );
+  //   headerContent = headerContent.replace(
+  //     '"../common/img/wh_logo.PNG',
+  //     '"./common/img/wh_logo.PNG'
+  //   );
+  //   footerContent = footerContent.replace(
+  //     '"../common/img/wh_logo.PNG',
+  //     '"./common/img/wh_logo.PNG'
+  //   );
 
-    $("header").html(headerContent);
-    $("footer").html(footerContent);
-  });
+  //   $("header").html(headerContent);
+  //   $("footer").html(footerContent);
+  // });
 
   // 슬라이딩 컨텐츠 펼치기
 
