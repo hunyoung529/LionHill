@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $.get("./common/maincommon.html", function (data) {
+  $.get("./common/mainCommon.html", function (data) {
     var headerContent = $(data).filter("header").html();
     var footerContent = $(data).filter("footer").html();
 
