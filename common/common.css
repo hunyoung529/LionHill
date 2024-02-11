@@ -66,6 +66,8 @@ header .inner .inner2 .btn_wrap button {
 }
 header .inner .inner2 .btn_wrap a {
   cursor: pointer;
+  text-align: center;
+  border: 1px solid #fff;
   background: transparent;
   color: #fff;
   width: 127px;
