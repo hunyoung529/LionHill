@@ -1,87 +1,81 @@
-let swiper = '';
+let swiper = "";
 
-const elUl = document.querySelectorAll('section.room_sec1 .roomWrapper>ul');
-console.log('elUl', elUl);
+const elUl = document.querySelectorAll("section.room_sec1 .roomWrapper>ul");
 
 $.ajax({
-    url: "../db/room.json",
+  url: "../db/room.json",
 
+  success: function (data) {
+    console.log("data", data);
+    console.log("data[0]", data[0]);
 
-    success: function(data){
-        console.log('data',data);
-        console.log('data[0]',data[0]);
+    let tagAll = "",
+      tagStandard = "",
+      tagDeluxe = "";
 
-        
-        let tagAll = '', tagStandard = '', tagDeluxe = ''; 
+    // const createRoom = (tagName, ele, k) => {
+    //         let sub_tag = '';
 
-        // const createRoom = (tagName, ele, k) => {
-        //         let sub_tag = '';
+    //         tagName += `<li>
+    //                     <figure>
+    //                         <div class="swiper roomSwiper slide">
+    //                             <ul class="swiper-wrapper">`;
 
-        //         tagName += `<li>
-        //                     <figure>
-        //                         <div class="swiper roomSwiper slide">
-        //                             <ul class="swiper-wrapper">`;
-               
-        //             //슬라이드 사진
-        //         ele.roomImg.forEach((src, key)=>{
-                            
-        //                     sub_tag += `<li class="swiper-slide">
-        //                                     <a href="./roomDetail.html">
-        //                                     <img src="./img/room/${src}" alt="${ele.roomImgAlt[key]}">
-        //                                     <div class="blackBg"></div>
-        //                                     </a>
-        //                             </li>`;
-        //         });//ele.roomImg.forEach((src, key)
-        //         tagName += sub_tag;
-    
-                
-    
-        //         tagName +=              `</ul>
-    
-        //                             <button class="leftBtn swiper-button-prev" type="button"></button>
-        //                             <button class="rightBtn swiper-button-next" type="button"></button>
-        //                         </div>
-    
-        //                         <div class="txtWrapper">
-        //                             <figcaption>${ele.name}</figcaption>
-        //                             <span class="roomType">
-        //                                 객실형태: <code>${ele.InRoomAmenities}</code>
-        //                             </span>
-        //                             <span class="roomPersonnel">
-        //                                 인원수: <code>${ele.occupancy}</code>
-        //                             </span>
-        //                             <a href="./roomDetail.html">DETAIL VIEW</a>
-        //                         </div>
-        //                     </figure>
-        //                 </li>`;
-        
-        // }//createRoom()
-        
-        let tagName = '';
+    //             //슬라이드 사진
+    //         ele.roomImg.forEach((src, key)=>{
 
-        const createRoom = (ele, k) => {
-                let sub_tag = '';
+    //                     sub_tag += `<li class="swiper-slide">
+    //                                     <a href="./roomDetail.html">
+    //                                     <img src="./img/room/${src}" alt="${ele.roomImgAlt[key]}">
+    //                                     <div class="blackBg"></div>
+    //                                     </a>
+    //                             </li>`;
+    //         });//ele.roomImg.forEach((src, key)
+    //         tagName += sub_tag;
 
-                tagName += `<li>
+    //         tagName +=              `</ul>
+
+    //                             <button class="leftBtn swiper-button-prev" type="button"></button>
+    //                             <button class="rightBtn swiper-button-next" type="button"></button>
+    //                         </div>
+
+    //                         <div class="txtWrapper">
+    //                             <figcaption>${ele.name}</figcaption>
+    //                             <span class="roomType">
+    //                                 객실형태: <code>${ele.InRoomAmenities}</code>
+    //                             </span>
+    //                             <span class="roomPersonnel">
+    //                                 인원수: <code>${ele.occupancy}</code>
+    //                             </span>
+    //                             <a href="./roomDetail.html">DETAIL VIEW</a>
+    //                         </div>
+    //                     </figure>
+    //                 </li>`;
+
+    // }//createRoom()
+
+    let tagName = "";
+
+    const createRoom = (ele, k) => {
+      let sub_tag = "";
+
+      tagName += `<li>
                             <figure>
                                 <div class="swiper roomSwiper slide">
                                     <ul class="swiper-wrapper">`;
-               
-                    //슬라이드 사진
-                ele.roomImg.forEach((src, key)=>{
-                            
-                            sub_tag += `<li class="swiper-slide">
+
+      //슬라이드 사진
+      ele.roomImg.forEach((src, key) => {
+        sub_tag += `<li class="swiper-slide">
                                             <a href="./roomDetail.html?key=${k}">
                                             <img src="./img/room/${src}" alt="${ele.roomImgAlt[key]}">
                                             <div class="blackBg"></div>
                                             </a>
                                     </li>`;
-                });//ele.roomImg.forEach((src, key)
-                tagName += sub_tag;
-    
-                
-    
-                tagName +=              `</ul>
+      }); //ele.roomImg.forEach((src, key)
+      tagName += sub_tag;
+
+      tagName += `</ul>
     
                                     <button class="leftBtn swiper-button-prev" type="button"></button>
                                     <button class="rightBtn swiper-button-next" type="button"></button>
@@ -100,71 +94,54 @@ $.ajax({
                             </figure>
                         </li>`;
 
-                return tagName;
-        }//createRoom()
+      return tagName;
+    }; //createRoom()
 
+    // All 탭 - - - - - - - - - - - - - - - - - - - - - - - - -
+    data.forEach((ele, k) => {
+      tagAll = createRoom(ele, k);
+    }); //data.forEach((ele, k)
+    tagName = "";
 
-        // All 탭 - - - - - - - - - - - - - - - - - - - - - - - - -
-        data.forEach((ele, k)=>{
-                tagAll = createRoom(ele, k);
-        });//data.forEach((ele, k)
-        tagName = '';
+    // Standard 탭 - - - - - - - - - - - - - - - - - - - - - - - - -
+    data.forEach((ele, k) => {
+      if (ele.type == "standard single" || ele.type == "standard couple") {
+        tagStandard = createRoom(ele, k);
+      }
+    }); //data.forEach((ele, k)
+    tagName = "";
 
-        // Standard 탭 - - - - - - - - - - - - - - - - - - - - - - - - -
-        data.forEach((ele, k)=>{
-          if(ele.type == "standard single" || ele.type == "standard couple"){
-                tagStandard = createRoom(ele, k);
-          }
+    // Deluxe 탭 - - - - - - - - - - - - - - - - - - - - - - - - -
+    data.forEach((ele, k) => {
+      if (ele.type == "deluxe single" || ele.type == "deluxe couple") {
+        tagDeluxe = createRoom(ele, k);
+      }
+    }); //data.forEach((ele, k)
 
-        });//data.forEach((ele, k)
-        tagName = '';
+    elUl[0].innerHTML = tagAll;
+    elUl[1].innerHTML = tagStandard;
+    elUl[2].innerHTML = tagDeluxe;
 
-        // Deluxe 탭 - - - - - - - - - - - - - - - - - - - - - - - - -
-        data.forEach((ele, k)=>{
-                if(ele.type == "deluxe single" || ele.type == "deluxe couple"){
-                        tagDeluxe = createRoom(ele, k);
-                }
+    swiper = new Swiper(".roomSwiper", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 
-        });//data.forEach((ele, k)
-        console.log(tagAll, tagStandard, tagDeluxe);
+    $(function () {
+      $("#RoomsTab").tabs();
+    });
+  }, //success
 
-        elUl[0].innerHTML = tagAll;
-        elUl[1].innerHTML = tagStandard;
-        elUl[2].innerHTML = tagDeluxe;
+  error: function () {
+    console.log("---ajax에 문제가 발생했습니다.---");
+  },
+}); //ajax
 
-        swiper = new Swiper(".roomSwiper", {
-                loop: true,
-                navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-                }
-        });
-        
-        $( function() {
-                $( "#RoomsTab" ).tabs();
-        } );
-        
-    }, //success
-
-
-    error: function(){
-        console.log('---ajax에 문제가 발생했습니다.---');
-    }
-});//ajax
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <li>
+{
+  /* <li>
 <figure>
     <div class="swiper roomSwiper slide">
         <ul class="swiper-wrapper">
@@ -204,4 +181,5 @@ $.ajax({
         <a href="">DETAIL VIEW</a>
     </div>
 </figure>
-</li> */}
+</li> */
+}
