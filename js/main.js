@@ -696,13 +696,13 @@ const content = [
   },
 
   {
-    image: "./main/img/main_sec2_img4.jpg",
+    image: "./main/img/main_sec2_img3.jpg",
     title: "반려동물 운동장",
     text: "라이온힐에 머무시는 동안 반려동물들이 마음껏 뛰어놀 수있는 공간입니다.",
   },
 
   {
-    image: "./main/img/main_sec2_img2.jpg",
+    image: "./main/img/main_sec2_img4.jpg",
     title: "피트니스 센터",
     text: "최신 운동기구와 편안한 공간을 제공합니다.머무는 동안 피트니스 센터를 이용하여 건강하고 활기찬 휴식을 즐겨보세요. 이용 시간은 오전 6시부터 오후 8시까지입니다.",
   },
