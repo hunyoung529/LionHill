@@ -1,35 +1,43 @@
-jQuery(document).ready(function ($) {
-  $("body").prepend('<article class="loginPopup"></article>');
-  $(".loginPopup").load("./sub/mainLogin.html", function () {
-    // Kakao와 Google 로그인 스크립트 로드 후에 해당 함수 실행
-    $.getScript("./js/mainLogin.js");
-    $.getScript("https://apis.google.com/js/platform.js?onload=init");
+$(document).ready(function ($) {
+  // Kakao와 Google 로그인 스크립트 로드 후에 해당 함수 실행
+
+  $.getScript(
+    "https://apis.google.com/js/platform.js?onload=init",
+    function () {
+      console.log("Google login script loaded and init function called.");
+    }
+  );
+
+  $.getScript("./js/mainLogin.js", function () {
+    console.log("Kakao login script loaded.");
+    // Kakao 스크립트 로드 완료 후 Kakao 로그인 초기화
     doKakaoLogin();
   });
 });
 
 //로그인 API
+
 function doKakaoLogin() {
-  Kakao.init("c74cee27e841ddfac6edca4429b56ab3");
+  Kakao.init("0f820b109106ea2b1ee73e0020f60ad5");
   console.log(Kakao.isInitialized());
-  function kakaoLogin() {
-    Kakao.Auth.login({
-      success: function (response) {
-        Kakao.API.request({
-          url: "/v2/user/me",
-          success: function (response) {
-            console.log(response);
-          },
-          fail: function (error) {
-            console.log(error);
-          },
-        });
-      },
-      fail: function (error) {
-        console.log(error);
-      },
-    });
-  }
+}
+function kakaoLogin() {
+  Kakao.Auth.login({
+    success: function (response) {
+      Kakao.API.request({
+        url: "/v2/user/me",
+        success: function (response) {
+          console.log(response);
+        },
+        fail: function (error) {
+          console.log(error);
+        },
+      });
+    },
+    fail: function (error) {
+      console.log(error);
+    },
+  });
 }
 //구글
 function init() {

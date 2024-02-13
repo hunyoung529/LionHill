@@ -131,7 +131,7 @@ $(document).ready(function () {
   });
   //구글 로그인 api는 loginLoad.js로 옮김======
   //카카오 로그인 api=======================
-  Kakao.init("c74cee27e841ddfac6edca4429b56ab3");
+  Kakao.init("0f820b109106ea2b1ee73e0020f60ad5");
   console.log(Kakao.isInitialized());
   function kakaoLogin() {
     Kakao.Auth.login({
