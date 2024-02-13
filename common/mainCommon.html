@@ -65,7 +65,7 @@
       <a class="txt-ani" href="./sub/room.html">Rooms</a>
       <a class="txt-ani" href="./sub/events.html">Events</a>
       <a class="txt-ani" href="./sub/fac.html">Facilities</a>
-      <a class="txt-ani" href="./sub/about.html">about</a>
+      <a class="txt-ani" href="./sub/about.html">About</a>
       <a class="txt-ani" href="./sub/reservation.html">실시간 예약</a>
       <a class="txt-ani" id="headerLoginM"><span id="logInOutM">로그인</span></a>
     </div>
@@ -146,11 +146,16 @@
                   </script> -->
                   <ul class="login_google">
                       <li id="GgCustomLogin">
-                          <a href="javascript:void(0)">
-                              <span>구글 아이디로 로그인</span>
-                          </a>
+                        <div id="g_id_onload" data-client_id="838540086384-7p0bi00jsaprpg63b2h58kv937h8of4f.apps.googleusercontent.com"
+                        data-login_uri="https://your.domain/your_login_endpoint" data-auto_prompt="false">
+                      </div>
+                      <div class="g_id_signin" data-type="standard" data size="large"
+                        data-theme="outline" data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left">
+                      </div>
                       </li>
                   </ul>
+
+
                   <script>//구글 로그인 script
                       // function init() {
                       //     gapi.load('auth2', function() {
