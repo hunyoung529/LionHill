@@ -18,7 +18,10 @@ $(document).ready(function ($) {
 //로그인 API
 
 function doKakaoLogin() {
-  Kakao.init("0f820b109106ea2b1ee73e0020f60ad5");
+  if (!Kakao.isInitialized()) {
+    // Kakao SDK가 아직 초기화되지 않았다면 초기화 실행
+    Kakao.init("0f820b109106ea2b1ee73e0020f60ad5");
+  }
   console.log(Kakao.isInitialized());
 }
 function kakaoLogin() {
