@@ -8,6 +8,8 @@
 처음이었던 만큼 아쉬움도 크지만 진행하며 많이 배웠습니다.
 
 ```
+## Languages
+[html] [javascript] [jQuery] [SCSS] [KAKAO API] [GOOGLE API]
 
 ## 만든 기간
 
